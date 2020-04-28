@@ -19,6 +19,14 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender ;
 
+   gesture (selectedgender){
+    GestureDetector(
+        onTap: (){
+      setState(() {
+        selectedGender = selectedgender;                   });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,32 +39,31 @@ class _InputPageState extends State<InputPage> {
           child: Row(
             children: <Widget>[
               Expanded(
-                  child: GestureDetector(
-                    onTap: (){
-                     setState(() {
-                      selectedGender = Gender.male;                   });
-                     },
-                    child: CustomCard(
-                        colour: selectedGender== Gender.male ? activeCardColor : inactiveCardColor,
+                  child: CustomCard(
+                    onPress: (){
+                      setState(() {
+                        selectedGender = Gender.male;
+                      });
+                    },
+                      colour: selectedGender== Gender.male ? activeCardColor : inactiveCardColor,
                cardChild: IconContent(
                  icon: FontAwesomeIcons.mars,
                  iconText: 'MALE',
                )
-                    ),
                   ),
               ),
               Expanded(
-                  child:GestureDetector(
-                    onTap: (){
+                  child:CustomCard(
+                    onPress: (){
                       setState(() {
-                          selectedGender= Gender.female;                      });
+                        selectedGender = Gender.female;
+                      });
                     },
-                    child: CustomCard(colour: selectedGender == Gender.female ? activeCardColor : inactiveCardColor,
+                    colour: selectedGender == Gender.female ? activeCardColor : inactiveCardColor,
                 cardChild: IconContent(
              icon: FontAwesomeIcons.venus,
              iconText: 'FEMALE'),
              ),
-                  ),
               ),
             ],
           ),
