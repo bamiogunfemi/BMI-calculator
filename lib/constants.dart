@@ -14,3 +14,9 @@ Color(0xFF8D8E98));
 const kNumberTextStyle =  TextStyle(
     fontSize: 50,
     fontWeight: FontWeight.w900 );
+
+const kLargeButtonTextStyle = TextStyle(
+  fontSize:25,
+  fontWeight: FontWeight.bold,
+  color: Colors.white
+);
