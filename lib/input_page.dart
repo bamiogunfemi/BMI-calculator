@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'icon_content.dart';
 import 'customCard.dart';
 import 'constants.dart';
-
+import 'roundIconButton.dart';
 
 enum Gender { female , male}
 
@@ -113,14 +113,12 @@ class _InputPageState extends State<InputPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          RoundIconButton(),
+                          RoundIconButton(icon: FontAwesomeIcons.plus,),
                           SizedBox(
                             width: 10,
                           ),
-                          FloatingActionButton(
-                            backgroundColor: kInactiveColor,
-                            child: Icon(Icons.remove, color: Colors.white,),
-                          ),
+                          RoundIconButton(icon: FontAwesomeIcons.minus,),
+
                         ],
                       )
                     ],
@@ -139,16 +137,6 @@ class _InputPageState extends State<InputPage> {
           height: kBottomContainerHeight,
         ),
       ]),
-    );
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      shape: CircleBorder(),
-        fillColor: kIconButtonColor,
     );
   }
 }
