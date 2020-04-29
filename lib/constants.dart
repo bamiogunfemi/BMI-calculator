@@ -5,6 +5,7 @@ const kActiveCardColor = Color(0xFF1D1E33);
 const kInactiveCardColor = Color(0xFF111328);
 const kButtonColor = Color(0xFFEB1555);
 const kInactiveColor = Color(0xFF8D8E98);
+const kOverlayColor =Color(0x29eb1555);
 const kLabelTextStyle =TextStyle(
     fontSize: 18, color:
 Color(0xFF8D8E98));
