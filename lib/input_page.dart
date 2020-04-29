@@ -5,7 +5,7 @@ import 'icon_content.dart';
 import 'customCard.dart';
 import 'constants.dart';
 import 'roundIconButton.dart';
-
+import 'result_page.dart';
 enum Gender { female , male}
 
 class InputPage extends StatefulWidget {
@@ -177,11 +177,23 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
         ),
-        Container(
-          color: kButtonColor,
-          margin: EdgeInsets.only(top: 10),
-          width: double.infinity,
-          height: kBottomContainerHeight,
+        GestureDetector(
+          onTap: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                  builder: (context){
+                    return ResultPage();
+          },
+                ),
+            );
+          },
+          child: Container(
+            child: Text('CALCULATE'),
+            color: kButtonColor,
+            margin: EdgeInsets.only(top: 10),
+            width: double.infinity,
+            height: kBottomContainerHeight,
+          ),
         ),
       ]),
     );
