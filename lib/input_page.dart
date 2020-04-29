@@ -18,6 +18,7 @@ class _InputPageState extends State<InputPage> {
   Gender selectedGender ;
  int height =180;
  int weight = 60;
+ int age = 18;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,11 +114,24 @@ class _InputPageState extends State<InputPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          RoundIconButton(icon: FontAwesomeIcons.plus,),
+                          RoundIconButton(
+                            onPressed: (){
+                              setState(() {
+                                weight++;
+
+                              });
+                            },
+                            icon: FontAwesomeIcons.plus,),
                           SizedBox(
                             width: 10,
                           ),
-                          RoundIconButton(icon: FontAwesomeIcons.minus,),
+                          RoundIconButton(
+                            onPressed: (){
+                              setState(() {
+                                weight--;
+
+                              });
+                            },icon: FontAwesomeIcons.minus,),
 
                         ],
                       )
@@ -126,7 +140,40 @@ class _InputPageState extends State<InputPage> {
                       colour: kActiveCardColor),
               ),
               Expanded(
-                  child: CustomCard(colour:kActiveCardColor)),
+                child: CustomCard(cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('AGE', style: kLabelTextStyle,),
+                    Text(age.toString(),
+                      style: kNumberTextStyle,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        RoundIconButton(
+                          onPressed: (){
+                            setState(() {
+                              age++;
+
+                            });
+                          },
+                          icon: FontAwesomeIcons.plus,),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        RoundIconButton(
+                          onPressed: (){
+                            setState(() {
+                              age--;
+
+                            });
+                          },icon: FontAwesomeIcons.minus,),
+
+                      ],
+                    )
+                  ],
+                ),
+                    colour: kActiveCardColor),
+              ),
             ],
           ),
         ),
