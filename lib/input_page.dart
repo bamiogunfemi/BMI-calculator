@@ -194,6 +194,7 @@ class _InputPageState extends State<InputPage> {
             ),
             color: kButtonColor,
             margin: EdgeInsets.only(top: 10),
+            padding: EdgeInsets.only(bottom: 10),
             width: double.infinity,
             height: kBottomContainerHeight,
           ),
