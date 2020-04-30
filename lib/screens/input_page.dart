@@ -25,7 +25,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('AFRICAN MOTHER BMI CALCULATOR'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -186,7 +186,7 @@ class _InputPageState extends State<InputPage> {
     MaterialPageRoute(
     builder: (context){
     return ResultPage(
-      bmiResult: calc.getInterpretation(),
+      bmiResult: calc.calculateBMI(),
       resultText: calc.getResult(),
       interpretation: calc.getInterpretation(),
     );

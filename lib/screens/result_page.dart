@@ -13,7 +13,7 @@ class ResultPage extends StatelessWidget {
     return Scaffold
       (
       appBar: AppBar(
-        title : Text ('BMI CALCULATOR'),
+        title : Text ('AFRICAN MOTHER BMI CALCULATOR'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
