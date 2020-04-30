@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'custom_card.dart';
-import 'buttom_button.dart';
+import '../constants.dart';
+import '../components/custom_card.dart';
+import '../components/buttom_button.dart';
 class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

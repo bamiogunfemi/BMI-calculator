@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
-import 'icon_content.dart';
-import 'custom_card.dart';
-import 'constants.dart';
-import 'round_icon_button.dart';
+import '../components/icon_content.dart';
+import '../components/custom_card.dart';
+import '../constants.dart';
+import '../components/round_icon_button.dart';
 import 'result_page.dart';
-import 'buttom_button.dart';
+import '../components/buttom_button.dart';
 enum Gender { female , male}
 
 class InputPage extends StatefulWidget {
