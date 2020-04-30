@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'customCard.dart';
+import 'custom_card.dart';
+import 'buttom_button.dart';
 class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class ResultPage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: Container(
@@ -27,10 +29,21 @@ class ResultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('Normal')
+                  Text('Normal', style: kResultTextStyle),
+                  Text('18.3', style: kBMITextStyle,),
+                  Text('NOT BAS',
+                    textAlign: TextAlign.center,
+                    style: kBodyTextStyle,)
+
                 ],
               ) ,
             ) ,
+          ),
+          BottomButton(
+            text: 'RE-CALCULATE',
+            onTap: (){
+              Navigator.pop(context);
+            },
           )
         ],
       )

@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'icon_content.dart';
-import 'customCard.dart';
+import 'custom_card.dart';
 import 'constants.dart';
-import 'roundIconButton.dart';
+import 'round_icon_button.dart';
 import 'result_page.dart';
+import 'buttom_button.dart';
 enum Gender { female , male}
 
 class InputPage extends StatefulWidget {
@@ -177,27 +178,17 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
         ),
-        GestureDetector(
+        BottomButton(
           onTap: (){
-            Navigator.push(context,
-                MaterialPageRoute(
-                  builder: (context){
-                    return ResultPage();
+    Navigator.push(context,
+    MaterialPageRoute(
+    builder: (context){
+    return ResultPage();
+    }
+    ),
+    );
           },
-                ),
-            );
-          },
-          child: Container(
-            child: Center(
-                child: Text('CALCULATE', style: kLargeButtonTextStyle,
-                ),
-            ),
-            color: kButtonColor,
-            margin: EdgeInsets.only(top: 10),
-            padding: EdgeInsets.only(bottom: 10),
-            width: double.infinity,
-            height: kBottomContainerHeight,
-          ),
+          text: 'CALCULATE'
         ),
       ]),
     );
